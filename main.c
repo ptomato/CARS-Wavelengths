@@ -541,7 +541,7 @@ create_main_window(void)
     /* Build combo box menu for Raman shift units; can't do this automatically,
     because we have a custom renderer that uses the "markup" property instead
     of "text", which is necessary because of the superscript in cm^-1 */
-    GtkListStore *store = gtk_list_store_new(1, GTK_TYPE_STRING);
+    GtkListStore *store = gtk_list_store_new(1, G_TYPE_STRING);
     GtkTreeIter iter;
     int i;
     for(i = 0; i < NUM_ENERGY_UNITS; i++) {
