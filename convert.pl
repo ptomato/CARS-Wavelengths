@@ -1,14 +1,14 @@
 #!/usr/bin/perl -w
 
 print STDOUT <<END;
-#ifndef __INTERFACE_H__
-#define __INTERFACE_H__
+#ifndef INTERFACE_H
+#define INTERFACE_H
 
-#include <glib.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-G_BEGIN_DECLS
-
-gchar interface_string[] = 
+char interface_string[] =
 END
 
 while(<>) {
@@ -19,7 +19,9 @@ while(<>) {
 
 print STDOUT <<END;
 ;
-G_END_DECLS
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
-#endif /* __INTERFACE_H__ */
+#endif /* INTERFACE_H */
 END
