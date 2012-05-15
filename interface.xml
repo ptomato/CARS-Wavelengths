@@ -1,22 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<?xml version="1.0"?>
 <!--Generated with glade3 3.4.3 on Thu Nov 27 16:00:10 2008 -->
-<glade-interface>
-  <widget class="GtkWindow" id="main_window">
+<interface>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">10189</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">3000</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="upper">1064.0999999999999</property>
+    <property name="lower">0</property>
+    <property name="page_increment">1</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_size">0</property>
+    <property name="value">917.60000000000002</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment3">
+    <property name="upper">1064.0999999999999</property>
+    <property name="lower">0</property>
+    <property name="page_increment">1</property>
+    <property name="step_increment">0.10000000000000001</property>
+    <property name="page_size">0</property>
+    <property name="value">719.5</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment4">
+    <property name="upper">100</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">0</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment5">
+    <property name="upper">100</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">0</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment6">
+    <property name="upper">100</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">0</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment7">
+    <property name="upper">100</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">0</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment8">
+    <property name="upper">100</property>
+    <property name="lower">0</property>
+    <property name="page_increment">10</property>
+    <property name="step_increment">1</property>
+    <property name="page_size">0</property>
+    <property name="value">0</property>
+  </object>
+  <object class="GtkListStore" id="model1">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">Signal + idler</col>
+      </row>
+      <row>
+        <col id="0">Signal + 1064 nm</col>
+      </row>
+      <row>
+        <col id="0">Idler + 1064 nm</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="model2">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Wavelengths</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Frequencies</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="main_window">
     <property name="border_width">12</property>
     <property name="title" translatable="yes">CARS Wavelengths</property>
     <property name="icon_name">oslogo</property>
-    <signal name="delete_event" handler="gtk_main_quit"/>
+    <signal handler="gtk_main_quit" name="delete_event"/>
     <child>
-      <widget class="GtkVBox" id="vbox1">
+      <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
         <property name="spacing">12</property>
         <child>
-          <widget class="GtkNotebook" id="notebook1">
+          <object class="GtkNotebook" id="notebook1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child>
-              <widget class="GtkTable" id="table1">
+              <object class="GtkTable" id="table1">
                 <property name="visible">True</property>
                 <property name="border_width">12</property>
                 <property name="n_rows">4</property>
@@ -24,26 +116,26 @@
                 <property name="column_spacing">6</property>
                 <property name="row_spacing">12</property>
                 <child>
-                  <widget class="GtkLabel" id="label4">
+                  <object class="GtkLabel" id="label4">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Beam combination</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">beam_combination</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="x_options">GTK_FILL</property>
                     <property name="y_options">GTK_FILL</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label5">
+                  <object class="GtkLabel" id="label5">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Raman shift</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">raman_shift</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">1</property>
                     <property name="bottom_attach">2</property>
@@ -52,13 +144,13 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label6">
+                  <object class="GtkLabel" id="label6">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Signal</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">signal</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">2</property>
                     <property name="bottom_attach">3</property>
@@ -67,13 +159,13 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label7">
+                  <object class="GtkLabel" id="label7">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Anti-Stokes</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">antistokes</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">3</property>
                     <property name="bottom_attach">4</property>
@@ -82,11 +174,11 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="raman_shift_unit">
+                  <object class="GtkLabel" id="raman_shift_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">cm&lt;sup&gt;-1&lt;/sup&gt;</property>
                     <property name="use_markup">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -97,10 +189,10 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="signal_unit">
+                  <object class="GtkLabel" id="signal_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -111,10 +203,10 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="antistokes_unit">
+                  <object class="GtkLabel" id="antistokes_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -125,11 +217,11 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="raman_shift">
+                  <object class="GtkSpinButton" id="raman_shift">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">3000 0 10189 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment1</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -139,12 +231,12 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="signal">
+                  <object class="GtkSpinButton" id="signal">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">917.60000000000002 0 1064.0999999999999 0.10000000000000001 1 0</property>
+                    <property name="adjustment">adjustment2</property>
                     <property name="digits">1</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -154,12 +246,12 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="antistokes">
+                  <object class="GtkSpinButton" id="antistokes">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">719.5 0 1064.0999999999999 0.10000000000000001 1 0</property>
+                    <property name="adjustment">adjustment3</property>
                     <property name="digits">1</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -169,33 +261,36 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkComboBox" id="beam_combination">
+                  <object class="GtkComboBox" id="beam_combination">
                     <property name="visible">True</property>
-                    <property name="items">Signal + idler
-Signal + 1064 nm
-Idler + 1064 nm</property>
-                    <signal name="changed" handler="on_beam_combination_changed"/>
-                  </widget>
+                    <signal handler="on_beam_combination_changed" name="changed"/>
+                    <property name="model">model1</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="renderer1"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">3</property>
                     <property name="y_options">GTK_FILL</property>
                   </packing>
                 </child>
-              </widget>
+              </object>
             </child>
-            <child>
-              <widget class="GtkLabel" id="label2">
+            <child type="tab">
+              <object class="GtkLabel" id="label2">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">532-pumped OPO</property>
-              </widget>
+              </object>
               <packing>
-                <property name="type">tab</property>
                 <property name="tab_fill">False</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkTable" id="table2">
+              <object class="GtkTable" id="table2">
                 <property name="visible">True</property>
                 <property name="border_width">11</property>
                 <property name="n_rows">5</property>
@@ -203,26 +298,26 @@ Idler + 1064 nm</property>
                 <property name="column_spacing">6</property>
                 <property name="row_spacing">12</property>
                 <child>
-                  <widget class="GtkLabel" id="label8">
+                  <object class="GtkLabel" id="label8">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Pump</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">pump</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="x_options">GTK_FILL</property>
                     <property name="y_options">GTK_FILL</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label11">
+                  <object class="GtkLabel" id="label11">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Stokes</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">stokes</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">1</property>
                     <property name="bottom_attach">2</property>
@@ -231,13 +326,13 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label12">
+                  <object class="GtkLabel" id="label12">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">Pro_be</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">probe</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">2</property>
                     <property name="bottom_attach">3</property>
@@ -246,13 +341,13 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label13">
+                  <object class="GtkLabel" id="label13">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Anti-Stokes</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">free_antistokes</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">3</property>
                     <property name="bottom_attach">4</property>
@@ -261,13 +356,13 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label14">
+                  <object class="GtkLabel" id="label14">
                     <property name="visible">True</property>
                     <property name="xalign">0</property>
                     <property name="label" translatable="yes">_Raman shift</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">free_raman_shift</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="top_attach">4</property>
                     <property name="bottom_attach">5</property>
@@ -276,10 +371,10 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="pump_unit">
+                  <object class="GtkLabel" id="pump_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -288,10 +383,10 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="stokes_unit">
+                  <object class="GtkLabel" id="stokes_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -302,10 +397,10 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="probe_unit">
+                  <object class="GtkLabel" id="probe_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -316,10 +411,10 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="free_antistokes_unit">
+                  <object class="GtkLabel" id="free_antistokes_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">nm</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -330,11 +425,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="free_raman_shift_unit">
+                  <object class="GtkLabel" id="free_raman_shift_unit">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">cm&lt;sup&gt;-1&lt;/sup&gt;</property>
                     <property name="use_markup">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="right_attach">3</property>
@@ -345,11 +440,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="pump">
+                  <object class="GtkSpinButton" id="pump">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">0 0 100 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment4</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -357,11 +452,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="stokes">
+                  <object class="GtkSpinButton" id="stokes">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">0 0 100 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment5</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -371,11 +466,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="probe">
+                  <object class="GtkSpinButton" id="probe">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">0 0 100 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment6</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -385,11 +480,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="free_antistokes">
+                  <object class="GtkSpinButton" id="free_antistokes">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">0 0 100 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment7</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -399,11 +494,11 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkSpinButton" id="free_raman_shift">
+                  <object class="GtkSpinButton" id="free_raman_shift">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="adjustment">0 0 100 1 10 0</property>
-                  </widget>
+                    <property name="adjustment">adjustment8</property>
+                  </object>
                   <packing>
                     <property name="left_attach">1</property>
                     <property name="right_attach">2</property>
@@ -413,13 +508,12 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="pump_lock">
+                  <object class="GtkCheckButton" id="pump_lock">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Lock</property>
-                    <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="right_attach">5</property>
@@ -428,13 +522,12 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="stokes_lock">
+                  <object class="GtkCheckButton" id="stokes_lock">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Lock</property>
-                    <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="right_attach">5</property>
@@ -445,13 +538,12 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="probe_lock">
+                  <object class="GtkCheckButton" id="probe_lock">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Lock</property>
-                    <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="right_attach">4</property>
@@ -462,13 +554,12 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="antistokes_lock">
+                  <object class="GtkCheckButton" id="antistokes_lock">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Lock</property>
-                    <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="right_attach">5</property>
@@ -479,13 +570,12 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="raman_shift_lock">
+                  <object class="GtkCheckButton" id="raman_shift_lock">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Lock</property>
-                    <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
-                  </widget>
+                  </object>
                   <packing>
                     <property name="left_attach">3</property>
                     <property name="right_attach">5</property>
@@ -496,15 +586,14 @@ Idler + 1064 nm</property>
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkCheckButton" id="degenerate">
+                  <object class="GtkCheckButton" id="degenerate">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="label" translatable="yes">Same as pump</property>
-                    <property name="response_id">0</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
-                    <signal name="toggled" handler="on_degenerate_toggled"/>
-                  </widget>
+                    <signal handler="on_degenerate_toggled" name="toggled"/>
+                  </object>
                   <packing>
                     <property name="left_attach">4</property>
                     <property name="right_attach">5</property>
@@ -514,117 +603,116 @@ Idler + 1064 nm</property>
                     <property name="y_options">GTK_FILL</property>
                   </packing>
                 </child>
-              </widget>
-              <packing>
-                <property name="position">1</property>
-              </packing>
+              </object>
             </child>
-            <child>
-              <widget class="GtkLabel" id="label3">
+            <child type="tab">
+              <object class="GtkLabel" id="label3">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">Free wavelengths</property>
-              </widget>
+              </object>
               <packing>
-                <property name="type">tab</property>
                 <property name="position">1</property>
                 <property name="tab_fill">False</property>
               </packing>
             </child>
-          </widget>
+          </object>
         </child>
         <child>
-          <widget class="GtkHBox" id="hbox1">
+          <object class="GtkHBox" id="hbox1">
             <property name="visible">True</property>
             <property name="spacing">12</property>
             <child>
-              <widget class="GtkLabel" id="label9">
+              <object class="GtkLabel" id="label9">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_Display</property>
                 <property name="use_underline">True</property>
                 <property name="mnemonic_widget">beam_units</property>
-              </widget>
+              </object>
               <packing>
                 <property name="expand">False</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkComboBox" id="beam_units">
+              <object class="GtkComboBox" id="beam_units">
                 <property name="visible">True</property>
-                <property name="items" translatable="yes">Wavelengths
-Frequencies</property>
-                <signal name="changed" handler="on_beam_units_changed"/>
-              </widget>
+                <signal handler="on_beam_units_changed" name="changed"/>
+                <property name="model">model2</property>
+                <child>
+                  <object class="GtkCellRendererText" id="renderer2"/>
+                  <attributes>
+                    <attribute name="text">0</attribute>
+                  </attributes>
+                </child>
+              </object>
               <packing>
                 <property name="position">1</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkLabel" id="label1">
+              <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">Raman shift _units</property>
                 <property name="use_underline">True</property>
                 <property name="mnemonic_widget">energy_units</property>
-              </widget>
+              </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="position">2</property>
               </packing>
             </child>
             <child>
-              <widget class="GtkComboBox" id="energy_units">
+              <object class="GtkComboBox" id="energy_units">
                 <property name="visible">True</property>
-                <signal name="changed" handler="on_energy_units_changed"/>
-              </widget>
+                <signal handler="on_energy_units_changed" name="changed"/>
+              </object>
               <packing>
                 <property name="position">3</property>
               </packing>
             </child>
-          </widget>
+          </object>
           <packing>
             <property name="expand">False</property>
             <property name="position">1</property>
           </packing>
         </child>
         <child>
-          <widget class="GtkHButtonBox" id="hbuttonbox1">
+          <object class="GtkHButtonBox" id="hbuttonbox1">
             <property name="visible">True</property>
             <property name="spacing">12</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <widget class="GtkButton" id="about">
+              <object class="GtkButton" id="about">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="label" translatable="yes">gtk-about</property>
                 <property name="use_stock">True</property>
-                <property name="response_id">0</property>
-                <signal name="clicked" handler="gtk_widget_show" object="about_window"/>
-              </widget>
+                <signal handler="gtk_widget_show" name="clicked" object="about_window"/>
+              </object>
             </child>
             <child>
-              <widget class="GtkButton" id="button1">
+              <object class="GtkButton" id="button1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="label" translatable="yes">gtk-quit</property>
                 <property name="use_stock">True</property>
-                <property name="response_id">0</property>
-                <signal name="clicked" handler="gtk_main_quit"/>
-              </widget>
+                <signal handler="gtk_main_quit" name="clicked"/>
+              </object>
               <packing>
                 <property name="position">1</property>
               </packing>
             </child>
-          </widget>
+          </object>
           <packing>
             <property name="expand">False</property>
             <property name="position">2</property>
           </packing>
         </child>
-      </widget>
+      </object>
     </child>
-  </widget>
-  <widget class="GtkAboutDialog" id="about_window">
+  </object>
+  <object class="GtkAboutDialog" id="about_window">
     <property name="border_width">5</property>
     <property name="title" translatable="yes">About CARS Wavelengths</property>
     <property name="resizable">False</property>
@@ -633,7 +721,6 @@ Frequencies</property>
     <property name="icon_name">oslogo</property>
     <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
     <property name="transient_for">main_window</property>
-    <property name="has_separator">False</property>
     <property name="program_name">CARS Wavelengths</property>
     <property name="version">1.0</property>
     <property name="copyright" translatable="yes">Copyright 2008 Philip Chimento</property>
@@ -652,27 +739,27 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</property>
     <property name="logo_icon_name">oslogo</property>
     <property name="wrap_license">True</property>
-    <signal name="close" handler="gtk_widget_hide"/>
-    <signal name="delete_event" handler="gtk_widget_hide_on_delete"/>
-    <signal name="response" handler="gtk_widget_hide"/>
+    <signal handler="gtk_widget_hide" name="close"/>
+    <signal handler="gtk_widget_hide_on_delete" name="delete_event"/>
+    <signal handler="gtk_widget_hide" name="response"/>
     <child internal-child="vbox">
-      <widget class="GtkVBox" id="dialog-vbox1">
+      <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="spacing">2</property>
         <child>
           <placeholder/>
         </child>
         <child internal-child="action_area">
-          <widget class="GtkHButtonBox" id="dialog-action_area1">
+          <object class="GtkHButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
-          </widget>
+          </object>
           <packing>
             <property name="expand">False</property>
             <property name="pack_type">GTK_PACK_END</property>
           </packing>
         </child>
-      </widget>
+      </object>
     </child>
-  </widget>
-</glade-interface>
+  </object>
+</interface>
